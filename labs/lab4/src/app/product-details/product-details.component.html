@@ -1,0 +1,35 @@
+<h2>Product Details</h2>
+
+<div *ngIf="product">
+    <div class="details-cont">
+        <p class="product-img"><img src="{{product.imgaddress}}" width="200" height="250"></p>
+        <div class="product-info">
+            <h3>{{ product.name }}</h3>
+            <h4>{{ product.price}} T</h4>
+            <p>{{ product.description }}</p>
+            <p>Rating : {{product.rating}}</p>
+            <form action="{{product.link}}" target="_blank">
+                <button class="kaspi-button">KASPI.KZ</button>
+            </form>
+        </div>
+        <div class="gallery">
+            <div class="slider-middle">
+                <div class="slides">
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+
+                    <div class="slide s1"><img src="{{product.gallery[0]}}" alt=""></div>
+                    <div class="slide"><img src="{{product.gallery[1]}}" alt=""></div>
+                    <div class="slide"><img src="{{product.gallery[2]}}" alt=""></div>
+                </div>
+
+                <div class="navigation">
+                        <label for="r1" class="bar"></label>
+                        <label for="r2" class="bar"></label>
+                        <label for="r3" class="bar"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

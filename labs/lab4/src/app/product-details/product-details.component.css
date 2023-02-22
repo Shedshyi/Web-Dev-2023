@@ -1,0 +1,116 @@
+*{
+    overflow-x: hidden;
+}
+
+.details-cont{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 100px;
+}
+
+.product-img{
+    float: left;
+    border: 1px blue solid;
+    padding: 5px;
+
+}
+
+.product-info{
+    float: left;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding: 50px;
+    border: 1px red solid;
+
+}
+
+.block{
+    float: bottom;
+    width: 600px;
+    height: 800px;
+}
+
+
+body{
+    background-color:red;
+}
+
+.gallery{
+    float: bottom;
+    margin-top: 350px;
+    margin-right: 350px;
+}
+
+.slider{
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.middle{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation{
+    position: absolute;
+    bottom: -50px;
+    left: 768px;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+.bar{
+    float: bottom;
+    height: 8px;
+    width: 30px;
+    margin: 6px;
+    background-color: blue;
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: all .4s ease;
+    margin-top: 0px;
+}
+
+.bar:hover{
+    opacity: 0.8;
+    background-color: red;
+    transform: scale(1.1);
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 25%;
+    transition: all .6s ease;
+}
+
+.slide img{
+    width: 23%;
+    height: 50%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0px;
+}
+
+
+#r2:checked ~ .s1{
+    margin-left: -25%;
+}
+
+#r3:checked ~ .s1{
+    margin-left: -50%;
+}
