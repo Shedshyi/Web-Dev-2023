@@ -1,0 +1,35 @@
+<div class="container">
+<div *ngIf="product != undefined" id="item">
+    <h3>
+        <a href="{{product.link}}">
+            {{product.name}}
+        </a>
+    </h3>
+
+    <img src="{{product.imgaddress}}" alt="product image" height="250px">
+
+    <p *ngIf="product.description" id="descr">
+        {{product.description}}
+    </p>
+
+
+    <div style="font-size: 16px; display: inline-flex; margin: 0;">
+        Rating: {{stars(product.rating, true)}}<div style="position:relative;font-size: 25px;outline: none; margin: 0; bottom: 6px">{{stars(5-product.rating, false)}}</div>
+    </div>
+
+    <div style="margin: 5px 0 5px 0">
+        <label style="display: inline-flex; margin-right: 15px"> Likes: {{product.likes}} </label>  <button style="font-size: 16px" [ngStyle]="{'background-color' : isPressed ? 'red' : '#e3e3e3', 'color' : isPressed ? 'white' : 'red'}" (click)="pressLike()">❤</button>
+    </div>
+
+    <div style="display: inline-flex; margin-top: 20px">
+        <button type="button" (click)="share(product)" style="width: 70px;  margin-right: 20px">
+            Share
+        </button>
+
+        <button type="button" (click)="delete(product.id)" style="width: 70px; background-color: #ff4242">
+            Delete
+        </button>
+    </div>
+
+</div>
+</div>

@@ -1,0 +1,39 @@
+<div *ngFor = "let product of products" >
+    <app-product-item *ngIf="product.category == category" [product] = product (removeID)="remove($event)"></app-product-item>
+</div>
+
+<div class="container">
+    <h2>Products</h2>
+
+    <div class="container-product-list">
+        <div *ngFor="let product of products" class="products-line">
+            <div class="product-one">
+                <h3>
+                    <a [title]="product.name + ' details'"
+                            [routerLink]="['/products', product.id]">
+                        {{ product.name }}
+                    </a>
+                </h3>
+
+                <p *ngIf="product.imgaddress">
+                    <img src="{{ product.imgaddress }}" width="200" height="250">
+                </p>
+
+                <hr>
+
+                <button type="button" (click)="share()" href="https://t.me/Shedshyi">
+                    SHARE
+                </button>
+
+                <app-product-alerts
+                        [product]="product"
+                        (notify)="onNotify()">
+                </app-product-alerts>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--
+    Copyright Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->

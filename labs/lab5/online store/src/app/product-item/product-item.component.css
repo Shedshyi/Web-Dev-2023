@@ -1,0 +1,26 @@
+#descr{
+    width: 400px;
+}
+
+#item{
+    display: inline-block;
+    margin: 20px 50px 50px 30px ;
+    justify-content: center;
+    align-items: center;
+    /*display : block;*/
+    box-sizing: content-box;
+    margin-top: 50px;
+    margin: 70px;
+    margin-left: 150px;
+}
+
+
+.red{
+    background: red;
+}
+
+.container{
+    display: inline-block;
+    display: block;
+    border: 2px black solid;
+}

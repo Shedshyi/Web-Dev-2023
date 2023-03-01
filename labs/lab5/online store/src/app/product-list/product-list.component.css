@@ -1,0 +1,29 @@
+.product-one{
+    justify-content: center;
+    align-items: center;
+    display : block;
+    box-sizing: content-box;
+    margin-top: 50px;
+    margin: 70px;
+    margin-left: 150px;
+}
+
+.products-line{
+    display: inline-block;
+    border: 1px #afadad solid;
+    /*margin-left: 50px;*/
+}
+
+.container{
+    display: inline-block;
+}
+
+.container-product-list{
+    margin-left: 100px;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
